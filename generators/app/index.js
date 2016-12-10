@@ -15,7 +15,7 @@ module.exports = yeoman.Base.extend({
     var prompts = [{
       type: 'input',
       name: 'project_name',
-      message: 'Your project_name (eg: like this `vue-button` )?',
+      message: 'Your project_name (eg: like this `react-button` )?',
       default: yoHelper.discoverRoot
     },{
       type: 'input',
