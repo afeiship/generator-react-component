@@ -8,7 +8,6 @@ var env = process.env.NODE_ENV;
 var cssSourceMapDev = (env === 'development' && config.dev.cssSourceMap)
 var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap)
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd;
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var externals = process.env.NODE_ENV === 'production' ? {
   react: 'React',
   'react-dom': 'ReactDOM'
@@ -43,13 +42,10 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css!autoprefixer')
-    }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!less')
-    }, {
+      loader: 'style-loader!css-loader!autoprefixer-loader',
+    },  {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style', 'css!autoprefixer!sass')
+      loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
     }, {
       test: /\.(gif|jpg|png)\??.*$/,
       loader: 'url-loader?limit=8096&name=images/[name].[ext]'
