@@ -31,6 +31,12 @@ module.exports = {
       'components': path.resolve(__dirname, '../src/components')
     }
   },
+  plugins:[
+    new webpack.ProvidePlugin({
+        'React': 'react',
+        'ReactDOM': 'react-dom'
+    }),
+  ],
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
