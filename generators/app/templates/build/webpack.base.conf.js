@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var config = require('../config')
 var utils = require('./utils')
 var env = process.env.NODE_ENV;
