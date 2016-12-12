@@ -1,5 +1,5 @@
 #<%=project_name%>
-> Mint-ui(Vue2.x) widget <%=project_name%> based on sass &amp; webpack.
+> <%=description%>
 
 
 ## resource:
