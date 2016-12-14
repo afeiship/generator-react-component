@@ -47,7 +47,7 @@ module.exports = yeoman.Base.extend({
   },
   _writingTplFiles: function() {
     this.fs.copyTpl(
-      this.templatePath('{*,build/*,src/*.js,src/components/*.scss}'),
+      this.templatePath('{*,build/*,src/*.*,src/components/*.scss}'),
       this.destinationPath('.'),
       this.props
     );
