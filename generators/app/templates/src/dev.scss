@@ -1,3 +1,7 @@
+*{margin: 0;padding:0;}
+ul,li{list-style: none;}
+
 .hello-<%=project_name%>{
   color:#F00;
+  padding:100px 20px;
 }
