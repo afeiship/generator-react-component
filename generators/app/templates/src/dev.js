@@ -7,7 +7,7 @@ class App extends React.Component{
     return (
       <div className="hello-<%=project_name%>">
         <<%=ProjectName%> />
-      <div>
+    </div>
     );
   }
 }
