@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import './dev.scss';
 import <%=ProjectName%> from './main';
 
 
-console.log(<%=ProjectName%>);
+class App extends React.Component{
+  render(){
+    return (
+      <div className="hello-<%=project_name%>">
+        <<%=ProjectName%> />
+      <div>
+    );
+  }
+}
+
 
 ReactDOM.render(
-    <<%=ProjectName%> />,
+    <App />,
     document.getElementById('app')
 );
