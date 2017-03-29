@@ -1,9 +1,10 @@
 import './style.scss';
+import React,{PropTypes} from 'react';
 import classNames from 'classnames';
 
-export default class extends React.Component{
+export default class extends React.PureComponent{
   static propTypes = {
-    cssClass:React.PropTypes.string
+    className:PropTypes.string
   };
 
   static defaultProps = {
@@ -16,7 +17,7 @@ export default class extends React.Component{
 
   render(){
     return (
-      <div className={classNames('<%=project_name%>',this.props.cssClass)}>
+      <div className={classNames('<%=project_name%>',this.props.className)}>
         Hello React!
       </div>
     );
