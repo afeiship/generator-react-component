@@ -1,8 +1,8 @@
 import './style.scss';
-import React,{PropTypes} from 'react';
+import React,{PureComponent,PropTypes} from 'react';
 import classNames from 'classnames';
 
-export default class extends React.PureComponent{
+export default class extends PureComponent{
   static propTypes = {
     className:PropTypes.string
   };
