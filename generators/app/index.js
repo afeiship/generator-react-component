@@ -33,7 +33,7 @@ module.exports = yeoman.Base.extend({
 
     yoHelper.rewriteProps(this.props);
     var projectName=this.props.projectName;
-    this.props.ProjectName=projectName.charAt(0).toUpperCase()+projectName.slice(1);
+    // this.props.ProjectName=projectName.charAt(0).toUpperCase()+projectName.slice(1);
     this._writingCopyFiles();
     this._writingTplFiles();
     this._writingTemplate();
