@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const fileRegExp = require('file-regexp');
 const exampleRE = /\/\*===example start===\*\/\n([a-zA-Z.{\s()<="-<_>}]*)\/\*===example end===\*\//;
-const templateRE = /\/\*===properties start===\*\/([\w\s={}:.;]*)\/\*===properties end===\*\//;
+const templateRE = /\/\*===properties start===\*\/([\w\s={}:.;,'"]*)\/\*===properties end===\*\//;
 
 const targetPropsRE = /## properties:\n```javascript\n(.*)\n```/;
 const targetUsageRE = /## usage:\n```jsx\n(.*)\n```/;
@@ -12,8 +12,10 @@ let _readmeFile = path.join(__dirname,'../_README.MD');
 let exampleFile = path.join(__dirname,'../src/dev.js');
 let templateFile = path.join(__dirname,'../src/components/<%=project_name%>.js');
 
+
+
 let exampleRs = fileRegExp.fileGetContent(exampleFile,exampleRE);
-let templateRs = fileRegExp.fileGetConte
+let templateRs = fileRegExp.fileGetContent(templateFile,templateRE);
 
 // set default readme file:
 fs.writeFileSync(readmeFile, fs.readFileSync(_readmeFile,'utf-8'));
