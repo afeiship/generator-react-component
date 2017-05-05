@@ -1,7 +1,7 @@
 import './dev.scss';
 import <%=ProjectName%> from './main';
 
-
+/*===example start===*/
 class App extends React.Component{
   render(){
     return (
@@ -11,7 +11,7 @@ class App extends React.Component{
     );
   }
 }
-
+/*===example end===*/
 
 ReactDOM.render(
     <App />,

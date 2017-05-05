@@ -4,12 +4,12 @@
 
 ## properties:
 ```javascript
-AUTO_PROPERTIES
+BACKUP_PROPERTIES
 ```
 
 ## usage:
 ```jsx
-AUTO_USAGE
+BACKUP_USAGE
 ```
 
 
