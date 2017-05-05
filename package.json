@@ -25,7 +25,6 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "file-regexp": "github:afeiship/file-regexp",
     "yeoman-generator": "^0.23.0",
     "yosay": "^1.0.0"
   },
