@@ -9,7 +9,7 @@ const targetUsageRE = /## usage:\n```jsx\n(.*)\n```/;
 
 let readmeFile = path.join(__dirname,'../README.MD');
 let exampleFile = path.join(__dirname,'../src/dev.js');
-let templateFile = path.join(__dirname,'../src/components/template.js');
+let templateFile = path.join(__dirname,'../src/components/<%=project_name%>.js');
 
 let exampleRs = fileRegExp.fileGetContent(exampleFile,exampleRE);
 let templateRs = fileRegExp.fileGetContent(templateFile,templateRE);
