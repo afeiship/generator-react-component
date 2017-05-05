@@ -16,7 +16,7 @@ let exampleRs = fileRegExp.fileGetContent(exampleFile,exampleRE);
 let templateRs = fileRegExp.fileGetConte
 
 // set default readme file:
-fs.writeFileSync(readmeFile, fs.readFileSync(_readmeFile),'utf-8');
+fs.writeFileSync(readmeFile, fs.readFileSync(_readmeFile,'utf-8'));
 
 //do replace:
 fileRegExp.fileReplaceContent(readmeFile,targetPropsRE,templateRs);
