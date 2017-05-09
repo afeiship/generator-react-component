@@ -5,6 +5,7 @@ import React,{PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'noop';
+import objectAssign from 'object-assign';
 
 export default class extends PureComponent{
   /*===properties start===*/
