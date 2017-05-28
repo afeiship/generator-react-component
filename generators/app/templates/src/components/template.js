@@ -23,10 +23,9 @@ export default class extends PureComponent{
   }
 
   render(){
+    const {className,...props} = this.props;
     return (
-      <div className={classNames('<%=project_name%>',this.props.className)}>
-        Hello React!
-      </div>
+      <div className={classNames('<%=project_name%>',className)} />
     );
   }
 }
