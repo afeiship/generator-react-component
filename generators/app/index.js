@@ -1,23 +1,23 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
-var yoHelper = require('yeoman-generator-helper');
+const Generator = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
+const yoHelper = require('yeoman-generator-helper');
 
 
-module.exports = yeoman.Base.extend({
-  prompting: function () {
+module.exports = class extends Generator {
+  prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the stunning ' + chalk.red('generator-vue-component') + ' generator!'
     ));
 
-    var prompts = [{
+    let prompts = [{
       type: 'input',
       name: 'project_name',
       message: 'Your project_name (eg: like this `react-button` )?',
       default: yoHelper.discoverRoot
-    },{
+    }, {
       type: 'input',
       name: 'description',
       message: 'Your description?'
@@ -27,42 +27,43 @@ module.exports = yeoman.Base.extend({
       // To access props later use this.props.someAnswer;
       this.props = props;
     }.bind(this));
-  },
+  }
 
-  writing: function () {
-
+  writing() {
     yoHelper.rewriteProps(this.props);
-    var projectName=this.props.projectName;
-    // this.props.ProjectName=projectName.charAt(0).toUpperCase()+projectName.slice(1);
     this._writingCopyFiles();
     this._writingTplFiles();
     this._writingTemplate();
-  },
-  _writingCopyFiles: function() {
+  }
+
+  _writingCopyFiles() {
     this.fs.copy(
       this.templatePath('{.*,config/*}'),
       this.destinationPath('.')
     );
-  },
-  _writingTplFiles: function() {
+  }
+
+  _writingTplFiles() {
     this.fs.copyTpl(
       this.templatePath('{*,build/*,src/*.*,src/components/*.scss}'),
       this.destinationPath('.'),
       this.props
     );
-  },
-  _writingTemplate: function() {
+  }
+
+  _writingTemplate() {
     this.fs.copyTpl(
       this.templatePath('src/components/template.js'),
       this.destinationPath('src/components/' + this.props.project_name + '.js'),
       this.props
     );
-  },
-  install: function () {
+  }
+
+  install() {
     console.log('use ` yarn install `');
-    //this.installDependencies();
-  },
-  end: function() {
+  }
+
+  end() {
     console.log('Enjoy coding~ :)');
   }
-});
+};
