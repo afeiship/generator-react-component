@@ -12,7 +12,7 @@ BACKUP_PROPERTIES
 BACKUP_USAGE
 ```
 
-## import style:
+## customize style:
 ```scss
 // customize your exception styles:
 $<%=project_name%>-options:(
