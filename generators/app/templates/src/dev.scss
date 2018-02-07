@@ -1,6 +1,9 @@
 *{margin: 0;padding:0;box-sizing: border-box;}
 ul,li{list-style: none;}
 
+@import './components/style.scss';
+
+
 .hello-<%=project_name%>{
   color:#F00;
   padding:50px 20px;
