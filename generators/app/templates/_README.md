@@ -11,3 +11,12 @@ BACKUP_PROPERTIES
 ```jsx
 BACKUP_USAGE
 ```
+
+## import style:
+```scss
+// customize your exception styles:
+$<%=project_name%>-options:(
+);
+
+@import '~node_modules/<%=project_name%>/style.scss';
+```
