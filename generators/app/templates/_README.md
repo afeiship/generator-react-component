@@ -14,7 +14,7 @@ BACKUP_USAGE
 
 ## customize style:
 ```scss
-// customize your exception styles:
+// customize your styles:
 $<%=project_name%>-options:(
 );
 
