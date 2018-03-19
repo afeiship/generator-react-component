@@ -8,6 +8,8 @@ BACKUP_PROPERTIES
 ```
 
 ## usage:
+import <%=ProjectName%> from '<%=project_name%>';
+
 ```jsx
 BACKUP_USAGE
 ```
@@ -18,5 +20,5 @@ BACKUP_USAGE
 $<%=project_name%>-options:(
 );
 
-@import '~node_modules/<%=project_name%>/style.scss';
+@import 'node_modules/<%=project_name%>/style.scss';
 ```
