@@ -20,5 +20,5 @@ BACKUP_USAGE
 $<%=project_name%>-options:(
 );
 
-@import 'node_modules/<%=project_name%>/style.scss';
+@import 'node_modules/<%=project_name%>/dist/style.scss';
 ```
