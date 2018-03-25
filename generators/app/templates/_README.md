@@ -6,10 +6,12 @@
 ```javascript
 BACKUP_PROPERTIES
 ```
+## install:
+```js
+import <%=ProjectName%> from '<%=project_name%>';
+```
 
 ## usage:
-import <%=ProjectName%> from '<%=project_name%>';
-
 ```jsx
 BACKUP_USAGE
 ```
