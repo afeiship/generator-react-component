@@ -21,6 +21,14 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'description',
       message: 'Your description?'
+    }, {
+      type: 'list',
+      name: 'react_version',
+      message: 'Which React version?',
+      choices: [
+        "react-16",
+        "react-15"
+      ]
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -34,6 +42,8 @@ module.exports = class extends Generator {
     this._writingCopyFiles();
     this._writingTplFiles();
     this._writingTemplate();
+    this._writePkgJson();
+    this._cleanFiles();
   }
 
   _writingCopyFiles() {
@@ -51,12 +61,26 @@ module.exports = class extends Generator {
     );
   }
 
+  _writePkgJson() {
+    const { react_version } = this.props;
+    const pkgJson = react_version === 'react-16' ? 'package-16.json' : 'package-15.json';
+    this.fs.copyTpl(
+      this.templatePath(pkgJson),
+      this.destinationPath('package.json'),
+      this.props
+    );
+  }
+
   _writingTemplate() {
     this.fs.copyTpl(
       this.templatePath('src/components/template.js'),
       this.destinationPath('src/components/' + this.props.project_name + '.js'),
       this.props
     );
+  }
+
+  _cleanFiles(){
+    this.fs.delete('package-*.json');
   }
 
   install() {
