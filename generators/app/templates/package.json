@@ -83,10 +83,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "object-assign": "^4.1.1",
+    "mixin-decorator": "github:afeiship/mixin-decorator",
+    "next-dom-event": "github:afeiship/next-dom-event",
     "noop": "github:afeiship/noop",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "object-assign": "^4.1.1"
   }
 }

@@ -60,7 +60,7 @@ module.exports = class extends Generator {
   }
 
   install() {
-    console.log('use ` yarn install `');
+    console.log('use `npm install --registry=https://registry.npm.taobao.org` OR `yarn install`');
   }
 
   end() {

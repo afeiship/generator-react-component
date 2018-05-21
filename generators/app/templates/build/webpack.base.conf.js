@@ -36,6 +36,7 @@ module.exports = {
       ReactDOM: path.resolve(__dirname, '../node_modules/react-dom'),
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
+      'mixins': path.resolve(__dirname, '../src/components'),
       'components': path.resolve(__dirname, '../src/components')
     }
   },
