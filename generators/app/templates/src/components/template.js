@@ -1,27 +1,28 @@
-import React,{PureComponent} from 'react';
-
+import React,{ Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 
-export default class extends PureComponent{
+export default class extends Component{
   /*===properties start===*/
   static propTypes = {
-    className:PropTypes.string
+    className: PropTypes.string
   };
 
   static defaultProps = {
   };
   /*===properties end===*/
 
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor(inProps) {
+    super(inProps);
+    this.state = {
+    };
   }
 
   render(){
-    const {className,...props} = this.props;
+    const { className, ...props } = this.props;
     return (
       <div {...props} className={classNames('<%=project_name%>',className)} />
     );
