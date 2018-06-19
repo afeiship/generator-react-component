@@ -81,14 +81,16 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
     "mixin-decorator": "github:afeiship/mixin-decorator",
     "next-dom-event": "github:afeiship/next-dom-event",
     "noop": "github:afeiship/noop",
     "prop-types": "^15.5.10",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
     "object-assign": "^4.1.1"
   }
 }
