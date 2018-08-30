@@ -21,7 +21,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="hello-<%=project_name%>">
-        <%=ProjectName%> ref='rc' />
+        <<%=ProjectName%> ref='rc' />
       </div>
     );
   }
