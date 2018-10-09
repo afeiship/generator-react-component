@@ -55,6 +55,7 @@
     "file-regexp": "github:afeiship/file-regexp",
     "function-bind": "^1.0.2",
     "html-loader": "^0.4.4",
+    "prettier": "^1.14.3",
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "inject-loader": "^2.0.1",
