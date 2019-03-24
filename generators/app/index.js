@@ -9,7 +9,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the stunning ' + chalk.red('generator-vue-component') + ' generator!'
+      'Welcome to the stunning ' + chalk.red('generator-react-component') + ' generator!'
     ));
 
     let prompts = [{
@@ -21,14 +21,6 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'description',
       message: 'Your description?'
-    }, {
-      type: 'list',
-      name: 'react_version',
-      message: 'Which React version?',
-      choices: [
-        "react-16",
-        "react-15"
-      ]
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -62,10 +54,8 @@ module.exports = class extends Generator {
   }
 
   _writePkgJson() {
-    const { react_version } = this.props;
-    const pkgJson = react_version === 'react-16' ? 'package-16.json' : 'package-15.json';
     this.fs.copyTpl(
-      this.templatePath(pkgJson),
+      this.templatePath('package.json'),
       this.destinationPath('package.json'),
       this.props
     );

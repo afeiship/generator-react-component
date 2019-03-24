@@ -25,6 +25,8 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
     "yeoman-generator": "^1.1.1",
     "yosay": "^1.0.0"
   },
