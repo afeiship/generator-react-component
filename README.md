@@ -1,14 +1,14 @@
 # generator-react-component
-> Yeoman generator for react component based on webpack &amp; yarn.
+> Yeoman generator for react component based on webpack.
 
 ## installation
+> install from fei's github.
 ```bash
 npm install -g yo
 npm install -g afeiship/generator-react-component
 ```
 
-Then generate your new project:
-
+> Then generate your new project:
 ```bash
 yo react-component
 ```
