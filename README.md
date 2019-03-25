@@ -32,7 +32,7 @@ npm run docs
 
 ## clean cache:
 
-```conf
+```bash
 ## clean cache:
 rm -rf ~/.cache/node-yeoman-remote-cache/afeiship/boilerplate-react-component
 ```
