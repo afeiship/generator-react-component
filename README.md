@@ -4,8 +4,6 @@
 
 ## installation
 
-> Generator for react.
-
 ```shell
 npm install -g yo
 npm install -g afeiship/generator-react-component

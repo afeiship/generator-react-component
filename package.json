@@ -1,7 +1,7 @@
 {
   "name": "generator-react-component",
   "version": "2.0.0",
-  "description": "Generator for react.",
+  "description": "Yeoman generator for react component based on webpack.",
   "homepage": "https://github.com/afeiship/generator-react-component",
   "author": {
     "name": "afie",
