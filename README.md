@@ -36,3 +36,7 @@ npm run docs
 ## clean cache:
 rm -rf ~/.cache/node-yeoman-remote-cache/afeiship/boilerplate-react-component
 ```
+
+## template:
+
+- https://github.com/afeiship/boilerplate-react-component
