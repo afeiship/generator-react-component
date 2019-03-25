@@ -2,7 +2,8 @@
 > Yeoman generator for react component based on webpack.
 
 ## installation
-> install from fei's github.
+> Generator for react.
+
 ```bash
 npm install -g yo
 npm install -g afeiship/generator-react-component

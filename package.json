@@ -1,10 +1,10 @@
 {
   "name": "generator-react-component",
-  "version": "1.0.0",
-  "description": "Yeoman generator for react component based on webpack & yarn.",
+  "version": "2.0.0",
+  "description": "Generator for react.",
   "homepage": "https://github.com/afeiship/generator-react-component",
   "author": {
-    "name": "feizheng",
+    "name": "afie",
     "email": "1290657123@qq.com",
     "url": "https://github.com/afeiship"
   },
@@ -13,48 +13,66 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "react",
-    "componet",
-    "widget",
-    "yarn",
-    "node",
-    "npm",
-    "yeoman",
-    "generator",
+    "yeomon generator react component",
     "yeoman-generator"
   ],
-  "dependencies": {
-    "chalk": "^1.0.0",
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5",
-    "yeoman-generator": "^1.1.1",
-    "yosay": "^1.0.0"
-  },
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-xo-space": "^0.14.0",
-    "gulp": "^3.9.0",
-    "gulp-eslint": "^2.0.0",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-mocha": "^2.0.0",
-    "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0",
-    "yeoman-assert": "^2.0.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "glob": "^7.1.3",
+    "husky": "^1.2.0",
+    "jest": "^23.5.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.4",
+    "yeoman-assert": "^3.1.0",
     "yeoman-generator-helper": "github:afeiship/yeoman-generator-helper",
-    "yeoman-test": "^1.0.0"
+    "yeoman-remote": "^1.0.1",
+    "yeoman-test": "^1.7.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "replace-in-file": "^3.4.4",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": "xo-space",
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
-      "mocha": true
-    }
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
   },
   "repository": "git@github.com:afeiship/generator-react-component.git",
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
   "license": "MIT"
 }
