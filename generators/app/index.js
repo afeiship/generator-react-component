@@ -67,7 +67,7 @@ module.exports = class extends Generator {
       from: [
         /boilerplate-react-component-description/g,
         /boilerplate-react-component/g,
-        /BoilerplateReactCompnent/g
+        /BoilerplateReactComponent/g
       ],
       to: [description, project_name, ProjectName]
     });
