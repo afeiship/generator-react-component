@@ -71,5 +71,6 @@ module.exports = class extends Generator {
       ],
       to: [description, project_name, ProjectName]
     });
+    this.installDependencies({ npm: true });
   }
 };
