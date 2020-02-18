@@ -27,7 +27,6 @@
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.4",
     "yeoman-assert": "^3.1.0",
-    "yeoman-generator-helper": "github:afeiship/yeoman-generator-helper",
     "yeoman-remote": "^1.0.1",
     "yeoman-test": "^1.7.0"
   },
@@ -35,6 +34,7 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
+    "@feizheng/yeoman-generator-helper": "^1.0.1",
     "chalk": "^2.1.0",
     "replace-in-file": "^3.4.4",
     "yeoman-generator": "^2.0.1",
