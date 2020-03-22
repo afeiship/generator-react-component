@@ -1,5 +1,5 @@
 {
-  "name": "generator-react-component",
+  "name": "@feizheng/generator-react-component",
   "version": "2.0.0",
   "description": "Yeoman generator for react component based on webpack.",
   "homepage": "https://github.com/afeiship/generator-react-component",
@@ -42,32 +42,6 @@
   },
   "jest": {
     "testEnvironment": "node"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": "error"
-    },
-    "plugins": [
-      "prettier"
-    ]
   },
   "scripts": {
     "pretest": "eslint .",
