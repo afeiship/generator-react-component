@@ -27,6 +27,12 @@ module.exports = class extends Generator {
         default: yoHelper.discoverRoot
       },
       {
+        type: 'scope',
+        name: 'scope',
+        message: 'Your scope (eg: @babel )?',
+        default: 'feizheng'
+      },
+      {
         type: 'input',
         name: 'description',
         message: 'Your description?'
@@ -59,17 +65,23 @@ module.exports = class extends Generator {
   }
 
   end() {
-    const { project_name, description, ProjectName } = this.props;
+    const { project_name, scope, description, ProjectName } = this.props;
     const files = glob.sync(resolve(this.destinationPath(), '{**,.*}'));
 
     replace.sync({
       files,
       from: [
+        /@feizheng/g,
         /boilerplate-react-component-description/g,
         /boilerplate-react-component/g,
         /BoilerplateReactComponent/g
       ],
-      to: [description, project_name, ProjectName]
+      to: [
+        `@${scope}`,
+        description,
+        project_name,
+        ProjectName
+      ]
     });
   }
 };
