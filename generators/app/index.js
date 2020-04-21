@@ -71,13 +71,13 @@ module.exports = class extends Generator {
     replace.sync({
       files,
       from: [
-        /@feizheng/g,
+        /"name":\s+"@feizheng\//g,
         /boilerplate-react-component-description/g,
         /boilerplate-react-component/g,
         /BoilerplateReactComponent/g
       ],
       to: [
-        `@${scope}`,
+        `"name": "@${scope}/`,
         description,
         project_name,
         ProjectName
