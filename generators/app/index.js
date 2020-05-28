@@ -40,7 +40,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(
-      function(props) {
+      function (props) {
         // To access props later use this.props.someAnswer;
         this.props = props;
         yoHelper.rewriteProps(props);
@@ -53,7 +53,7 @@ module.exports = class extends Generator {
     remote(
       'afeiship',
       'boilerplate-react-component',
-      function(err, cachePath) {
+      function (err, cachePath) {
         // copy files:
         this.fs.copy(
           glob.sync(resolve(cachePath, '{**,.*}')),
@@ -71,13 +71,13 @@ module.exports = class extends Generator {
     replace.sync({
       files,
       from: [
-        /"name":\s+"@feizheng\//g,
+        /boilerplate-scope/g,
         /boilerplate-react-component-description/g,
         /boilerplate-react-component/g,
         /BoilerplateReactComponent/g
       ],
       to: [
-        `"name": "@${scope}/`,
+        scope,
         description,
         project_name,
         ProjectName
