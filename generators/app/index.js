@@ -35,7 +35,8 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'description',
-        message: 'Your description?'
+        message: 'Your description?',
+        required: true
       }
     ];
 
