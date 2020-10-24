@@ -36,12 +36,12 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'description',
         message: 'Your description?',
-        required: true
+        validate: Boolean
       }
     ];
 
     return this.prompt(prompts).then(
-      function (props) {
+      function(props) {
         // To access props later use this.props.someAnswer;
         this.props = props;
         yoHelper.rewriteProps(props);
@@ -54,7 +54,7 @@ module.exports = class extends Generator {
     remote(
       'afeiship',
       'boilerplate-react-component',
-      function (err, cachePath) {
+      function(err, cachePath) {
         // copy files:
         this.fs.copy(
           glob.sync(resolve(cachePath, '{**,.*}')),
@@ -77,12 +77,7 @@ module.exports = class extends Generator {
         /boilerplate-react-component/g,
         /BoilerplateReactComponent/g
       ],
-      to: [
-        scope,
-        description,
-        project_name,
-        ProjectName
-      ]
+      to: [scope, description, project_name, ProjectName]
     });
   }
 };
