@@ -6,7 +6,10 @@
 
 ```shell
 npm install -g yo
-npm install -g afeiship/generator-react-component
+
+git clone git@github.com:afeiship/generator-react-component.git
+cd generator-react-component
+npm link
 ```
 
 > Then generate your new project:
@@ -14,28 +17,3 @@ npm install -g afeiship/generator-react-component
 ```shell
 yo react-component
 ```
-
-## dev/build/docs:
-
-```shell
-## when developt:
-npm run dev
-
-## when you want to publish:
-npm run build
-
-## whne you need simple docs:shell
-npm run docs
-```
-
-## clean cache:
-
-```shell
-## clean cache:
-rm -rf ~/.cache/node-yeoman-remote-cache/afeiship/boilerplate-react-component
-```
-
-## template:
-
-- https://github.com/afeiship/boilerplate-react-component
-- https://github.com/adamreisnz/replace-in-file
