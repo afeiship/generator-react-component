@@ -34,7 +34,7 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "@feizheng/yeoman-generator-helper": "^1.0.1",
+    "@jswork/yeoman-generator-helper": "^1.0.3",
     "chalk": "^2.1.0",
     "replace-in-file": "^3.4.4",
     "yeoman-generator": "^2.0.1",

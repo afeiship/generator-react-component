@@ -21,16 +21,16 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type: 'input',
-        name: 'project_name',
-        message: 'Your project_name (eg: like this `react-button` )?',
-        default: yoHelper.discoverRoot
-      },
-      {
         type: 'scope',
         name: 'scope',
         message: 'Your scope (eg: @babel )?',
         default: 'jswork'
+      },
+      {
+        type: 'input',
+        name: 'project_name',
+        message: 'Your project_name (eg: like this `react-button` )?',
+        default: yoHelper.discoverRoot
       },
       {
         type: 'input',

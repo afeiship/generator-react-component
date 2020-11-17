@@ -1,9 +1,7 @@
 # generator-react-component
-
 > Yeoman generator for react component based on webpack.
 
 ## installation
-
 ```shell
 npm install -g yo
 
