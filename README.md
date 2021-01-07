@@ -13,5 +13,5 @@ npm link
 > Then generate your new project:
 
 ```shell
-yo react-component
+yo @jswork/react-component
 ```
