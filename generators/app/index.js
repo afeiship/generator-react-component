@@ -8,6 +8,14 @@ const remote = require('yeoman-remote');
 const yoHelper = require('@jswork/yeoman-generator-helper');
 const replace = require('replace-in-file');
 
+const types = [
+  { name: 'javascript', value: 'js' },
+  { name: 'typescript', value: 'ts' }
+];
+
+require('@jswork/next-registry-choices');
+require('@jswork/next-capitalize');
+
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -25,6 +33,18 @@ module.exports = class extends Generator {
         name: 'scope',
         message: 'Your scope (eg: @babel )?',
         default: 'jswork'
+      },
+      {
+        type: 'list',
+        name: 'registry',
+        message: 'Your registry',
+        choices: nx.RegistryChoices.gets()
+      },
+      {
+        type: 'list',
+        name: 'type',
+        message: 'Your language type?(js/ts)',
+        choices: types
       },
       {
         type: 'input',
@@ -50,32 +70,30 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    const { type } = this.props;
     const done = this.async();
-    remote(
-      'afeiship',
-      'boilerplate-react-component',
-      function(err, cachePath) {
-        // copy files:
-        this.fs.copy(
-          glob.sync(resolve(cachePath, '{**,.*}')),
-          this.destinationPath()
-        );
-        done();
-      }.bind(this)
-    );
+    const name = `boilerplate-react-${type}-component`;
+    remote('afeiship', name, (_, cachePath) => {
+      // copy files:
+      this.fs.copy(
+        glob.sync(resolve(cachePath, '{**,.*}')),
+        this.destinationPath()
+      );
+      done();
+    });
   }
 
   end() {
-    const { project_name, scope, description, ProjectName } = this.props;
+    const { type, project_name, scope, description, ProjectName } = this.props;
     const files = glob.sync(resolve(this.destinationPath(), '{**,.*}'));
 
     replace.sync({
       files,
       from: [
         /boilerplate-scope/g,
-        /boilerplate-react-component-description/g,
-        /boilerplate-react-component/g,
-        /BoilerplateReactComponent/g
+        new RegExp(`boilerplate-react-${type}-component-description`, 'g'),
+        new RegExp(`boilerplate-react-${type}-component`, 'g'),
+        new RegExp(`BoilerplateReact${nx.capitalize(type)}Component`, 'g')
       ],
       to: [scope, description, project_name, ProjectName]
     });
