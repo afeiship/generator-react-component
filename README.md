@@ -3,15 +3,16 @@
 
 ## installation
 ```shell
+# 1. Make sure you have install yeoman.
 npm install -g yo
 
+# 2. Install react-component generator
 git clone git@github.com:afeiship/generator-react-component.git
+
+# 3. link
 cd generator-react-component
 npm link
-```
 
-> Then generate your new project:
-
-```shell
+# 4. Then generate your new project:
 yo @jswork/react-component
 ```
