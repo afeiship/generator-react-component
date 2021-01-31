@@ -7,6 +7,7 @@ const { resolve } = require('path');
 const remote = require('yeoman-remote');
 const replace = require('replace-in-file');
 const prompts = require('./prompts');
+const yoHelper = require('@jswork/yeoman-generator-helper');
 
 require('@jswork/next-capitalize');
 
