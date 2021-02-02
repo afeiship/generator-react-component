@@ -5,9 +5,9 @@ const yosay = require('yosay');
 const glob = require('glob');
 const { resolve } = require('path');
 const remote = require('yeoman-remote');
-const yoHelper = require('@jswork/yeoman-generator-helper');
 const replace = require('replace-in-file');
 const prompts = require('./prompts');
+const yoHelper = require('@jswork/yeoman-generator-helper');
 
 require('@jswork/next-capitalize');
 
