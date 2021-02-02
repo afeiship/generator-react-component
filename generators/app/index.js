@@ -7,13 +7,8 @@ const { resolve } = require('path');
 const remote = require('yeoman-remote');
 const yoHelper = require('@jswork/yeoman-generator-helper');
 const replace = require('replace-in-file');
+const prompts = require('./prompts');
 
-const types = [
-  { name: 'javascript', value: 'js' },
-  { name: 'typescript', value: 'ts' }
-];
-
-require('@jswork/next-registry-choices');
 require('@jswork/next-capitalize');
 
 module.exports = class extends Generator {
@@ -27,46 +22,10 @@ module.exports = class extends Generator {
       )
     );
 
-    const prompts = [
-      {
-        type: 'scope',
-        name: 'scope',
-        message: 'Your scope (eg: @babel )?',
-        default: 'jswork'
-      },
-      {
-        type: 'list',
-        name: 'registry',
-        message: 'Your registry',
-        choices: nx.RegistryChoices.gets()
-      },
-      {
-        type: 'list',
-        name: 'type',
-        message: 'Your language type?(js/ts)',
-        choices: types
-      },
-      {
-        type: 'input',
-        name: 'project_name',
-        message: 'Your project_name (eg: like this `react-button` )?',
-        default: yoHelper.discoverRoot
-      },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'Your description?',
-        validate: Boolean
-      }
-    ];
-
-    return this.prompt(prompts).then(
-      function(props) {
-        // To access props later use this.props.someAnswer;
-        this.props = props;
-        yoHelper.rewriteProps(props);
-      }.bind(this)
-    );
+    return this.prompt(prompts).then((props) => {
+      this.props = props;
+      yoHelper.rewriteProps(props);
+    });
   }
 
   writing() {
@@ -75,9 +34,10 @@ module.exports = class extends Generator {
     const name = `boilerplate-react-${type}-component`;
     remote('afeiship', name, (_, cachePath) => {
       // copy files:
-      this.fs.copy(
+      this.fs.copyTpl(
         glob.sync(resolve(cachePath, '{**,.*}')),
-        this.destinationPath()
+        this.destinationPath(),
+        this.props
       );
       done();
     });
