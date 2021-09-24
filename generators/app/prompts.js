@@ -1,8 +1,8 @@
 const yoHelper = require('@jswork/yeoman-generator-helper');
 
 const types = [
-  { name: 'javascript', value: 'js' },
-  { name: 'typescript', value: 'ts' }
+  { name: 'typescript', value: 'ts' },
+  { name: 'javascript', value: 'js' }
 ];
 
 require('@jswork/next-registry-choices');
