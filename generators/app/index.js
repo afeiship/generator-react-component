@@ -30,32 +30,10 @@ module.exports = class extends Generator {
 
   writing() {
     const { type } = this.props;
-    const done = this.async();
-    const name = `boilerplate-react-${type}-component`;
-    remote('afeiship', name, (_, cachePath) => {
-      // copy files:
-      this.fs.copyTpl(
-        glob.sync(resolve(cachePath, '{**,.*}')),
-        this.destinationPath(),
-        this.props
-      );
-      done();
-    });
-  }
-
-  end() {
-    const { type, project_name, scope, description, ProjectName } = this.props;
-    const files = glob.sync(resolve(this.destinationPath(), '{**,.*}'));
-
-    replace.sync({
-      files,
-      from: [
-        /boilerplate-scope/g,
-        new RegExp(`boilerplate-react-${type}-component-description`, 'g'),
-        new RegExp(`boilerplate-react-${type}-component`, 'g'),
-        new RegExp(`BoilerplateReact${nx.capitalize(type)}Component`, 'g')
-      ],
-      to: [scope, description, project_name, ProjectName]
-    });
+    this.fs.copyTpl(
+      glob.sync(resolve(this.templatePath(type), '{**,.*}')),
+      this.destinationPath(),
+      this.props
+    );
   }
 };
