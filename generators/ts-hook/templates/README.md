@@ -28,19 +28,24 @@ npm install -S @<%= scope %>/<%= project_name %>
   import <%- ctx.camelize(project_name) %> from '@<%= scope %>/<%= project_name %>';
   import styled from 'styled-components';
 
-  const Container = styled.div`
-    width: 80%;
-    margin: 30px auto 0;
-  `;
+  export default function Component() {
+    const { value, setValue, setTrue, setFalse, toggle } = <%- ctx.camelize(project_name) %>(false)
 
-  export default (props: any) => {
+    // Just an example to use "setValue"
+    const customToggle = () => setValue(x => !x)
+
     return (
-      <Container>
-        <<%- ctx.camelize(project_name) %> />
-      </Container>
-    );
-  };
-
+      <>
+        <p>
+          Value is <code>{value.toString()}</code>
+        </p>
+        <button onClick={setTrue}>set true</button>
+        <button onClick={setFalse}>set false</button>
+        <button onClick={toggle}>toggle</button>
+        <button onClick={customToggle}>custom toggle</button>
+      </>
+    )
+  }
   ```
 
 ## preview
