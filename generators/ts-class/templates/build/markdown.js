@@ -19,7 +19,7 @@ nx.declare({
 
       nx.replaceInFile('README.md', [
         ['__GENERATE_DAPP__', indentString(docApp, 2)],
-        ['../../src/main', '@boilerplate-scope/boilerplate-react-ts-component']
+        ['../../src/main', '@<%= scope %>/<%= project_name %>']
       ]);
     }
   }

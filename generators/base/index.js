@@ -6,11 +6,6 @@ const genp = require('@jswork/generator-prompts');
 const prompts = genp(['scope', 'registry', 'project_name', 'description']);
 
 module.exports = class extends Generator {
-  async prompting() {
-    // Have Yeoman greet the user.
-    this.props = await this.prompt(prompts);
-  }
-
   writing() {
     const ctx = yoHelper.ctx;
     this.fs.copyTpl(
