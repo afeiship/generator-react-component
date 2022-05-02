@@ -19,7 +19,7 @@ export type <%- ctx.classify(project_name) %>Props = {
   onChange?: Function;
 };
 
-export default class <%- ctx.classify(project_name) %> extends Component<%- ctx.classify(project_name) %>Props {
+export default class <%- ctx.classify(project_name) %> extends Component<<%- ctx.classify(project_name) %>Props> {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
