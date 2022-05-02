@@ -1,9 +1,8 @@
 {
-  "name": "@boilerplate-scope/boilerplate-react-ts-component",
-  "boilerplate": "boilerplate-react-ts-component",
+  "name": "@<%= scope %>/<%= project_name %>",
   "homepage": "https://js.work",
   "version": "1.0.0",
-  "description": "boilerplate-react-ts-component-description",
+  "description": "<%= description %>",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/main.d.ts",
@@ -18,6 +17,7 @@
     "docs": "tsc && vite build",
     "docs:serve": "vite preview",
     "test": "jest",
+    "test:watch": "jest --watch",
     "pages": "github-cli -p",
     "release": "release-it"
   },
@@ -46,7 +46,7 @@
     "react-dom": "^17.0.2",
     "react-scripts-ts": "^3.1.0",
     "react-test-renderer": "^17.0.1",
-    "release-it": "^14.2.2",
+    "release-it": "^14.14.3",
     "rimraf": "^3.0.2",
     "rollup": "^2.36.0",
     "rollup-plugin-auto-external": "^2.0.0",
