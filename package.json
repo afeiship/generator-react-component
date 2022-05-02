@@ -13,7 +13,6 @@
   ],
   "main": "generators/index.js",
   "devDependencies": {
-    "glob": "^7.1.6",
     "prettier": "^2.2.1",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^3.0.0"
