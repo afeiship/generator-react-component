@@ -20,7 +20,7 @@ export default [
       format: 'umd',
       exports: 'named',
       sourcemap: false,
-      name: '<%- ctx.classify(project_name) %>Component',
+      name: '<%- ctx.classify(project_name) %>',
       globals: {
         '@jswork/noop': 'noop',
         'prop-types': 'PropTypes',
