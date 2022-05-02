@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 const CLASS_NAME = '<%= project_name %>';
 
-export type <%- ctx.classify(project_name) %>ComponentProps = {
+export type <%- ctx.classify(project_name) %>Props = {
   /**
    * The extended className for component.
    */
@@ -19,7 +19,7 @@ export type <%- ctx.classify(project_name) %>ComponentProps = {
   onChange?: Function;
 };
 
-export default class <%- ctx.classify(project_name)Component %> extends Component<<%- ctx.classify(project_name)ComponentProps %>Props> {
+export default class <%- ctx.classify(project_name) %> extends Component<%- ctx.classify(project_name) %>Props {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static defaultProps = {
