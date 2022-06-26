@@ -1,6 +1,7 @@
-import fs from 'fs';
-import indentString from 'indent-string';
-import '@jswork/next-replace-in-file';
+const fs = require('fs');
+const indentString = require('indent-string');
+
+require('@jswork/next-replace-in-file');
 
 nx.declare({
   statics: {
@@ -19,7 +20,7 @@ nx.declare({
 
       nx.replaceInFile('README.md', [
         ['__GENERATE_DAPP__', indentString(docApp, 2)],
-        ['../../src/main', '@<%= scope %>/<%= project_name %>']
+        ['../../src/main', '@jswork/antd-form-builder']
       ]);
     }
   }
