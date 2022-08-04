@@ -69,7 +69,6 @@
     "vite-plugin-pwa": "^0.7.3"
   },
   "dependencies": {
-    "@jswork/filter-react-props": "^1.0.2",
     "@jswork/noop": "^1.0.0",
     "classnames": "^2.2.6"
   },
