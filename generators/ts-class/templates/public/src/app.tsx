@@ -1,5 +1,5 @@
 import React from 'react';
-import <%- ctx.classify(project_name) %>Component from '../../src/main';
+import <%- ctx.classify(project_name) %> from '../../src/main';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
 export default (props: any) => {
   return (
     <Container>
-      <<%- ctx.classify(project_name) %>Component />
+      <<%- ctx.classify(project_name) %> />
     </Container>
   );
 };
