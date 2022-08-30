@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@jswork/next": "^1.0.4",
+    "@jswork/next-replace-in-file": "^1.0.0",
     "@jswork/next-rollup-banner": "^1.0.2",
     "@jswork/react-markdown-props": "^1.0.1",
     "@rollup/plugin-image": "^2.1.1",
@@ -46,7 +47,7 @@
     "react-dom": "^17.0.2",
     "react-scripts-ts": "^3.1.0",
     "react-test-renderer": "^17.0.1",
-    "release-it": "^14.14.3",
+    "release-it": "^15.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.36.0",
     "rollup-plugin-auto-external": "^2.0.0",
