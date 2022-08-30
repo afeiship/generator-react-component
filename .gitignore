@@ -4,3 +4,4 @@ coverage
 # vscode localhistory
 .history
 .vscode
+.DS_Store

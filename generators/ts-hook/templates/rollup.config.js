@@ -8,6 +8,7 @@ import externals from 'rollup-plugin-node-externals';
 import banner from 'rollup-plugin-banner';
 import { terser } from 'rollup-plugin-terser';
 import replace from '@rollup/plugin-replace';
+import image from '@rollup/plugin-image';
 
 import pkg from './package.json';
 import '@jswork/next-rollup-banner';
@@ -50,6 +51,7 @@ export default [
       replace({ __VERSION__: pkg.version, preventAssignment: true }),
       terser({ output: { comments: false } }),
       banner(nx.rollupBanner()),
+      image(),
       typescript({
         rollupCommonJSResolveHack: true,
         exclude: ['**/__tests__/**', '**/__stories__/**'],
@@ -71,7 +73,7 @@ export default [
     plugins: [
       scss({ output: 'dist/style.css' }),
       copy({
-        targets: [{ src: 'src/components/style.scss', dest: 'dist' }]
+        targets: [{ src: 'src/components/*.scss', dest: 'dist' }]
       })
     ]
   }

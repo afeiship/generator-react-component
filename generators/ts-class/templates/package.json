@@ -26,6 +26,7 @@
     "@jswork/next": "^1.0.4",
     "@jswork/next-rollup-banner": "^1.0.2",
     "@jswork/react-markdown-props": "^1.0.1",
+    "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-replace": "^2.3.4",
     "@testing-library/jest-dom": "^5.16.1",
