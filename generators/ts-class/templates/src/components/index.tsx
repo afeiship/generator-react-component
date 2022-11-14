@@ -17,7 +17,7 @@ export type <%- ctx.classify(project_name) %>Props = {
    * The change handler.
    */
   onChange?: Function;
-};
+} & HTMLAttributes<any>;
 
 export default class <%- ctx.classify(project_name) %> extends Component<<%- ctx.classify(project_name) %>Props> {
   static displayName = CLASS_NAME;
