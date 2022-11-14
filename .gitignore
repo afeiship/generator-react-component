@@ -5,3 +5,4 @@ coverage
 .history
 .vscode
 .DS_Store
+yarn.lock
