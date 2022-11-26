@@ -24,8 +24,8 @@ export default [
       globals: {
         '@jswork/noop': 'noop',
         'prop-types': 'PropTypes',
-        'classnames': 'classNames',
-        'react': 'React',
+        classnames: 'classNames',
+        react: 'React',
         'react-dom': 'ReactDOM'
       }
     },
@@ -52,15 +52,19 @@ export default [
       banner(nx.rollupBanner()),
       image(),
       typescript({
-        rollupCommonJSResolveHack: true,
-        exclude: ['**/__tests__/**', '**/__stories__/**'],
+        tsconfig: 'tsconfig.build.json',
         clean: true
       }),
       commonjs({
         include: ['node_modules/**'],
         namedExports: {
           'node_modules/react-is/index.js': Object.keys(require('react-is')),
-          'node_modules/react/react.js': ['Children', 'Component', 'PropTypes', 'createElement'],
+          'node_modules/react/react.js': [
+            'Children',
+            'Component',
+            'PropTypes',
+            'createElement'
+          ],
           'node_modules/react-dom/index.js': ['render']
         }
       })
