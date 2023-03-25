@@ -14,5 +14,5 @@ cd generator-react-component
 npm link
 
 # 4. Then generate your new project:
-yo @jswork/react-component:ts-class
+yo @jswork/react-component
 ```
