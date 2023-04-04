@@ -23,8 +23,8 @@ export default [
       globals: {
         '@jswork/noop': 'noop',
         'prop-types': 'PropTypes',
-        classnames: 'classNames',
-        react: 'React',
+        'classnames': 'classNames',
+        'react': 'React',
         'react-dom': 'ReactDOM'
       }
     },
