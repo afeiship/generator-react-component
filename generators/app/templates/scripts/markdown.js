@@ -20,7 +20,7 @@ nx.declare({
 
       nx.replaceInFile('README.md', [
         ['__GENERATE_DAPP__', indentString(docApp, 2)],
-        ['../../src/main', '@<%= scope %>/<%= project_name %>']
+        ['@/main', '@<%= scope %>/<%= project_name %>']
       ]);
     }
   }
