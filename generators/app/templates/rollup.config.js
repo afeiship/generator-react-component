@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import copy from 'rollup-plugin-copy';
 import scss from 'rollup-plugin-scss';
 import externals from 'rollup-plugin-node-externals';
@@ -23,8 +24,8 @@ export default [
       globals: {
         '@jswork/noop': 'noop',
         'prop-types': 'PropTypes',
-        'classnames': 'classNames',
-        'react': 'React',
+        classnames: 'classNames',
+        react: 'React',
         'react-dom': 'ReactDOM'
       }
     },
@@ -53,7 +54,8 @@ export default [
       typescript({
         tsconfig: 'tsconfig.build.json',
         clean: true
-      })
+      }),
+      commonjs()
     ]
   },
   {
