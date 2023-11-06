@@ -1,0 +1,19 @@
+{
+  "name": "<%= project_name %>",
+  "homepage": "https://js.work",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {},
+  "scripts": {
+    "dev": "cd packages/example && npm run dev",
+    "predocs": "rm -rf docs",
+    "docs": "cd packages/example && npm run build",
+    "postdocs": "cp -R packages/example/dist docs",
+    "ln:build": "cd packages/lib && npm run build",
+    "ln:publish": "cd packages/lib && npm run release"
+  }
+}

@@ -15,4 +15,7 @@ npm link
 
 # 4. Then generate your new project:
 yo @jswork/react-component
+
+# use tsup as builder
+yo @jswork/react-component:tsup
 ```
