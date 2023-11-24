@@ -28,7 +28,8 @@
   },
   "include": [
     "src",
-    "public"
+    "public",
+    "global.d.ts"
   ],
   "exclude": [
     "node_modules",
