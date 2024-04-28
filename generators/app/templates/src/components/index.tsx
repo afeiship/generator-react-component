@@ -1,6 +1,6 @@
 import noop from '@jswork/noop';
 import classNames from 'classnames';
-import React, { Component } from 'react';
+import React, { Component, HTMLAttributes } from 'react';
 
 const CLASS_NAME = '<%= project_name %>';
 
@@ -17,7 +17,7 @@ export type <%- ctx.classify(project_name) %>Props = {
    * The change handler.
    */
   onChange?: Function;
-} & HTMLAttributes<any>;
+} & HTMLAttributes<HTMLDivElement>;
 
 export default class <%- ctx.classify(project_name) %> extends Component<<%- ctx.classify(project_name) %>Props> {
   static displayName = CLASS_NAME;

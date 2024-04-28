@@ -4,5 +4,6 @@ coverage
 # vscode localhistory
 .history
 .vscode
+.idea
 .DS_Store
 yarn.lock
